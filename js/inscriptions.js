@@ -1,3 +1,5 @@
+$('body').fadeIn(1000);
+
 class Course {
      constructor(courseName, teacher, duration) {
         this.courseName = courseName;
@@ -72,3 +74,33 @@ function showCard(event) {
 }
 
 loadButton.addEventListener('click', showCard);
+
+
+const bttnComments = $('#bttnComments');
+
+$('#bttnComments').on('click', (e) => {
+    $.getJSON('../json/comment.json',(respuesta, status) => {
+        if (status === 'success') {
+            respuesta.forEach((alumno) => {
+                $('body').append(`<div id="cardsComments" class="card">
+                <div class="card-header">
+                    ${alumno.nombre}
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>${alumno.comment}</p>
+                    <footer class="blockquote-footer">Puntuación <cite title="Source Title">${alumno.puntuacion}</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+              `);
+            })
+            $('html, body').animate({
+                scrollTop: $("#cardsComments").offset().top  
+            }, 100);
+        }
+
+    });
+    
+});
+

@@ -131,11 +131,21 @@ button:hover {
   color: #525252;
 }
 
+/* Cards de cursos disponibles */
+
+.colorText {
+  color: rgb(22, 202, 142);
+}
+
+
 /* OTRAS PAGES */
 
-/*** Inscriptiosn ***/
+.body {
+  display: none;
+  background-color: #000000;
+}
 
-/** Contacto **/
+/*** Inscriptions ***/
 
 .mainPages {
   display: flex;
@@ -178,7 +188,18 @@ button:hover {
   color: black;
 }
 
-.colorText {
-  color: rgb(22, 202, 142);
+#bttnComments {
+  margin-top: 30px;
 }
+
+#cardsComments {
+  margin: 40px 100px;
+}
+
+/*** Login ***/
+
+#h2Login {
+  color: white
+}
+
 

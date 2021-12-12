@@ -1,0 +1,12 @@
+[
+    {
+        "nombre": "Carla",
+        "comment": "El curso de Wordpress me gustó mucho.",
+        "puntuacion": 10
+
+    },{
+        "nombre": "Juan",
+        "comment": "Gracias a este curso ahora trabajo en el rubro de la realización audiovisual.",
+        "puntuacion": 10
+    }
+]

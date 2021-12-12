@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     const bttnIndexCourses = $('#bttnIndexCourses');
     const mainHome = $('.mainHome');
@@ -37,7 +36,7 @@ $(document).ready(function(){
     }
 
     function availableCourses(courses, element) {
-        $(element).append(`<div class="card m-2 p-3 colorText">
+        $(element).append(`<div id="seccionAvailableCourses" class="card m-2 p-3 colorText">
         <h2>${courses.courseName}</h2>
         <ul>${populateAvaibleCourses(courses.teacher, courses.duration, courses.description)}</ul>
         </div>`
@@ -48,7 +47,11 @@ $(document).ready(function(){
         e.preventDefault();
         availableCourses(course1, mainHome);
         availableCourses(course2, mainHome);
+        $('html, body').animate({
+            scrollTop: $("#seccionAvailableCourses").offset().top  
+        }, 100);
     });
+
 });
 
 
