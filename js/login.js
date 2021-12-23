@@ -7,20 +7,22 @@ form.onsubmit = (event) => {
     const inputEmailUser = document.getElementById('inputEmailUser');
     let inputEmailUserValue = inputEmailUser.value;
 
-    if((inputEmailUserValue == "email@a.com") || (inputEmailUserValue == "email2@a.com") || (inputEmailUserValue == "email3@a.com")) {
-        localStorage.setItem('sesion', inputEmailUser.value);
+    users.forEach(element => {
+        if(inputEmailUser.value === element.email) {
+            localStorage.setItem('sesion', inputEmailUser.value);
 
-    } else {
-        event.preventDefault();
-        const alert2 = document.createElement('div');
-        alert2.className = "alert alert-danger";
-        alert2.innerHTML = `<p>El email no corresponde a un usuario registrado. Usa el usuario de prueba "email@a.com" para ver un ejemplo de curso.</p>`;
-        form.appendChild(alert2);
-    }
+        } else {
+            event.preventDefault();
+            const alert2 = document.createElement('div');
+            alert2.className = "alert alert-danger";
+            alert2.innerHTML = `<p>El email no corresponde a un usuario registrado. Usa el usuario de prueba "email@a.com" para ver un ejemplo de curso.</p>`;
+            form.appendChild(alert2);
+        }
+    });
 }
 
 function closeSessionFn() {
-    localStorage.clear();
+    localStorage.removeItem('sesion');
     location.reload();
 }
 
