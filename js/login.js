@@ -1,4 +1,4 @@
-$('body').fadeIn(1000);
+$('.body').fadeIn(1000);
 
 const form = document.getElementById('formLogin');
 let sesions = localStorage.getItem('sesion');

@@ -1,4 +1,4 @@
-$('body').fadeIn(1000);
+$('.body').fadeIn(1000);
 
 class Course {
      constructor(courseName, teacher, duration) {
