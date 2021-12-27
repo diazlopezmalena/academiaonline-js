@@ -26,14 +26,18 @@ function closeSessionFn() {
 
 if (sesions) {
     const login = document.createElement('div');
-    login.innerHTML = `<h2 id="h2Login">¡Hola! Has iniciado sesión con tu usuario: ${sesions}.</h2>
-                      <p style="color:#fff;">Aquí habrá un curso.</p>`;
+    login.innerHTML = `<h2 id="h2Login">¡Hola! <span>Has iniciado sesión con tu usuario: ${sesions}</span></h2>
+                       <div class="loginCourseCard">
+                       <h3>Curso Introductorio</h3>
+                       <p>Conocerás cómo utilizar la plataforma educativa online y cuáles son las modalidades de cursada, permanencia y acreditación en la Academia E-learning.</p>
+                       <a href="../pages/course.html"><button>Ir al curso 🚀</button></a>
+                       </div>`;
     document.body.appendChild(login);
 
     const mainLogin = document.getElementById('mainLogin');
     document.body.removeChild(mainLogin);
     const closeSession = document.createElement('div');
-    closeSession.innerHTML = `<button class="btn btn-light">Cerrar sesión</button>`;
+    closeSession.innerHTML = `<button class="btn btn-light closeSesion">Cerrar sesión</button>`;
     document.body.appendChild(closeSession);
     closeSession.addEventListener('click', closeSessionFn);
 } 
