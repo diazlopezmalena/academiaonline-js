@@ -29,16 +29,17 @@ $(document).ready(function(){
 
     function populateAvaibleCourses(teacher, duration, description) { 
         return `
-        <li>${teacher}</li>
-        <li>${duration}</li>
-        <li>${description}</li>
+        <li>Profesora: ${teacher}</li>
+        <li>✔ ${duration}</li>
+        <li>✔ ${description}</li>
         `
     }
 
     function availableCourses(courses, element) {
-        $(element).append(`<div id="seccionAvailableCourses" class="card m-2 p-3 colorText">
-        <h2>${courses.courseName}</h2>
+        $(element).append(`<div id="seccionAvailableCourses" class="card m-2 p-3 availableCourses">
+        <h2><a href="../pages/inscriptions.html">${courses.courseName}</a></h2>
         <ul>${populateAvaibleCourses(courses.teacher, courses.duration, courses.description)}</ul>
+        <div class="go"><a href="../pages/inscriptions.html"><img src="../images/cohete.png" alt=""></a></div>
         </div>`
         );
     }

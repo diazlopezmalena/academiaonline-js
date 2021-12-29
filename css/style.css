@@ -4,6 +4,14 @@
   box-sizing: border-box; 
 }
 
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+}
+
 /* NAV */
 
 header {
@@ -40,15 +48,9 @@ header nav ul li {
 .mainHome {
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 90vh auto;
-  grid-template-areas: "presentation"
- "courses"; 
 }
 
 .mainHomePresentation {
-  grid-area: presentation;
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,79,87,1) 39%, rgba(0,255,213,0.5867275280898876) 100%);
   width: 100%;
   display: flex;
@@ -56,6 +58,7 @@ header nav ul li {
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
+  height: 90vh;
 }
 
 .mainHomePresentationText {
@@ -84,26 +87,14 @@ header nav ul li {
   height: auto;
 }
 
-
 .mainHomePresentationImg img {
   max-width: 100%; 
-}
-
-.mainHomeCourses {
-  grid-area: courses;
-}
-
-.mainHomePresentationText button {
-  font-size: 18;
-  padding: 10px 40px;
-  border-radius: 4px;
 }
 
 /* Botones de la home */
 
 .button {
-  width: auto;
-  height: auto;
+
   background-color: black;
   color: white;
   border-radius: 5px;
@@ -111,6 +102,19 @@ header nav ul li {
   padding: 10px 40px;
   transition: all 0.5s;
   font-size: 19px;
+ }
+
+ .go {
+  margin-left: 30px;
+  width: 30px;
+ }
+
+ .go img {
+   max-width: 100%;
+ }
+
+ .go:hover {
+  transform: scale(1.2);
  }
 
 button:hover {
@@ -130,8 +134,22 @@ button:hover {
 
 /* Cards de cursos disponibles */
 
-.colorText {
-  color: rgb(22, 202, 142);
+.availableCourses {
+  color: rgb(26, 26, 26);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.719);
+}
+
+.availableCourses h2 a {
+  color: rgb(61, 61, 61);
+}
+
+.availableCourses h2 a:hover {
+  background-color: rgba(0,255,213,0.4);
+}
+
+#goToInscription {
+  background-color: rgba(0,255,213,0.4);
+
 }
 
 /** OTRAS PAGES **/
@@ -192,6 +210,10 @@ button:hover {
   margin: 40px 100px;
 }
 
+.welcomeCard {
+  color: rgb(7, 184, 154);
+}
+
 /*** Login ***/
 
 #h2Login {
@@ -227,7 +249,7 @@ button:hover {
 }
 
 .loginCourseCard button:hover {
-  background-color: rgba(0,255,213,0.5867275280898876);
+  background-color: rgba(0,255,213,0.5);
 }
 
 .closeSesion {
@@ -313,7 +335,6 @@ button:hover {
   padding: 10px;
   background-color: rgb(235, 235, 235);
   border-radius: 5px;
-  list-style: none;
   border: solid 1px rgb(223, 223, 223);
   font-size: 14px;
 }
@@ -351,3 +372,101 @@ button:hover {
 .accordion-item {
   box-shadow: 0px 0px 10px rgb(151, 151, 151);
 }
+
+@media only screen and (max-width:1024px) {
+  .mainHomePresentationText h1 {
+    font-size: 40px;
+  }
+
+  .mainHomePresentationText h1 span {
+    font-size: 85px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 36px;
+  }
+
+  /*** Inscription ***/
+  .contenedorForm {
+    width: 70%;
+  }
+  
+  .loginCourseCard {
+    width: 70%;
+  }  
+}
+
+@media only screen and (max-width:768px) {
+  .mainHomePresentationText p {
+    font-size: 16px;
+  }
+
+  .mainHomePresentationText h1 {
+    font-size: 34px;
+  }
+
+  .mainHomePresentationText h1 span {
+    font-size: 72px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 36px;
+    margin-bottom: 10px;
+  }
+
+  /*** Inscription ***/
+  .contenedorForm {
+    width: 90%;
+  }
+  
+  .loginCourseCard {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .mainHomePresentationText h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .mainHomePresentationText h1 span {
+    font-size: 35px;
+  }
+
+  .mainHomePresentationImg {
+    display: none;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 3px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.925);
+    border-radius: 5px;
+  }
+
+  .login {
+    width: 100%;
+  }
+
+  .mainHomePresentationText {
+    width: 90%;
+  }
+
+  /*** Inscription ***/
+  .contenedorForm {
+    width: 90%;
+  }
+
+  .loginCourseCard {
+    width: 90%;
+  }
+
+}
+

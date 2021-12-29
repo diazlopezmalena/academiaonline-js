@@ -49,7 +49,7 @@ const loadButton = document.getElementById('btnInscription');
 
 function welcomeCard(name, courseInscription, element) {
     const hello = document.createElement('div');
-    hello.className = "card m-2 p-3 colorText";
+    hello.className = "card m-2 p-3 welcomeCard";
     hello.innerHTML = `<h2>¡Hola ${name}!</h2>
     <h3>Se registró tu inscripción en ${courseInscription}.</h3>`;
     
