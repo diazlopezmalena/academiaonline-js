@@ -1,3 +1,5 @@
+/* Generales */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,14 @@ ul {
   list-style: none;
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* NAV */
 
 header {
@@ -22,7 +32,9 @@ header {
 
 .navBS {
   height: 80px;
+  padding: 0px !important;
 }
+
 .navBSMenu {
   background-color: #000000;
   height:  80px;
@@ -43,6 +55,25 @@ header nav ul li {
   color: #252525;
 }
 
+/* FOOTER */
+#copyright {
+  font-size: 13px;
+  padding: 10px;
+}
+
+#copyright a {
+  color: rgba(127, 255, 212, 0.74);
+}
+
+.footer {
+  background-color: #000000;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #525252;
+}
+
 /* HOME */
 
 .mainHome {
@@ -54,11 +85,11 @@ header nav ul li {
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,79,87,1) 39%, rgba(0,255,213,0.5867275280898876) 100%);
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-around;
   align-items: center;
-  align-content: space-around;
-  height: 90vh;
+  align-content: center;
+  height: 85vh;
 }
 
 .mainHomePresentationText {
@@ -104,32 +135,21 @@ header nav ul li {
   font-size: 19px;
  }
 
- .go {
-  margin-left: 30px;
-  width: 30px;
- }
-
- .go img {
-   max-width: 100%;
- }
-
- .go:hover {
-  transform: scale(1.2);
- }
-
-button:hover {
+ button:hover {
   background-color: aquamarine;
   transform: scale(1.05);
   color: black;
 }
 
-.footer {
-  background-color: #000000;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #525252;
+.go {
+  margin-left: 30px;
+  border: none;
+  background-color: transparent;
+  transform: scale(1.7);
+}
+
+.go:hover {
+  transform: scale(2.0);
 }
 
 /* Cards de cursos disponibles */
@@ -171,7 +191,7 @@ button:hover {
 
 .mainPagesH {
   color: white;
-  margin-top: 40px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -208,6 +228,7 @@ button:hover {
 
 #cardsComments {
   margin: 40px 100px;
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
 
 .welcomeCard {
@@ -284,8 +305,8 @@ button:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-content: center;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgb(151, 151, 151);
@@ -293,9 +314,14 @@ button:hover {
   background-color:white;
 }
 
+.courseMainVideo {
+  width: 50%;
+  height: 350px;
+}
+
 .courseMainText {
   width: 40%;
-  height: 400px;
+  height: auto;
 }
 
 .courseMainText p {
@@ -321,7 +347,7 @@ button:hover {
   font-weight: 600;
   position: relative;
   left: 75%;
-  bottom: 8%;
+  bottom: 35px;
   display: inline;
   box-shadow: 0px 0px 10px rgb(97, 97, 97);
 }
@@ -373,6 +399,82 @@ button:hover {
   box-shadow: 0px 0px 10px rgb(151, 151, 151);
 }
 
+/*** Contacto ***/
+
+.bodyContact {
+  background-color: black;
+}
+
+.mainPContacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  height: 80vh;
+}
+
+.contenedorContacto {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 8px 8px 5px #a1a1a1;
+  width: 50%;
+  height: auto;
+  margin: 30px;
+  padding: 20px;
+}
+
+#contenedorContactoButton {
+  display: flex;
+  justify-content: center; 
+}
+
+#contenedorContactoButton button {
+  background-color: black;
+  border-color: black;
+  padding: 10px 30px;
+}
+
+#contenedorContactoButton button:hover {
+  background-color: aquamarine;
+  border-color: black;
+  color: black; 
+}
+
+/*** Error 404 ***/
+
+.errorCaja {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 30px; 
+}
+  
+.errorCaja h1 {
+  font-size: 80px;
+  font-weight: bolder;
+  color: #636363; 
+}
+
+.errorCaja h2 {
+  font-size: 30px;
+  color: #5e5e5e; 
+  margin-bottom: 2%;
+}
+
+.errorCaja p {
+  font-size: 20px;
+  background-color: rgba(70, 70, 70, 0.514);
+  padding: 10px;
+  border-radius: 5px; 
+  display: inline;
+}
+
+.errorCaja p a {
+  color: aquamarine;
+}
+
+/* RESPONSIVE */
+
 @media only screen and (max-width:1024px) {
   .mainHomePresentationText h1 {
     font-size: 40px;
@@ -391,10 +493,11 @@ button:hover {
   .contenedorForm {
     width: 70%;
   }
-  
+
+  /*** Login ***/
   .loginCourseCard {
     width: 70%;
-  }  
+  }
 }
 
 @media only screen and (max-width:768px) {
@@ -427,17 +530,23 @@ button:hover {
 }
 
 @media only screen and (max-width:600px) {
+  .mainHomePresentationText {
+    margin-bottom: 80px;
+  }
+
   .mainHomePresentationText h1 {
     font-size: 30px;
     margin-bottom: 20px;
   }
 
   .mainHomePresentationText h1 span {
-    font-size: 35px;
+    font-size: 45px;
   }
 
   .mainHomePresentationImg {
-    display: none;
+    margin-left: 140px;
+    margin-top: 30px;
+    width: 25%;
   }
 
   .button {
@@ -464,9 +573,50 @@ button:hover {
     width: 90%;
   }
 
+  #cardsComments {
+    margin: 10px;
+  }
+
+  /*** Login ***/
   .loginCourseCard {
     width: 90%;
   }
 
-}
+  /*** Course ***/
+  .courseMain {
+    margin-top: 50px;
+    justify-content: space-between;
+    padding: 10px;
+  }
 
+  .courseMainVideo {
+    width: 100%;
+    height: 250px;
+  }
+
+  .courseMainText {
+    width: 100%;
+  }
+
+  .tagFree {
+    left: 70%;
+    bottom: 275px;    
+  }
+
+  .lessons {
+    width: 90%;
+    margin: 0px 0px 90px 15px;
+  }
+
+  /*** Contacto ***/
+  .contenedorContacto {
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 30px; 
+  }
+
+  /*** Error 404 ***/
+  .errorCaja p {
+    display: block;
+  }
+}

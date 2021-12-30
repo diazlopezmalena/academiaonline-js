@@ -39,7 +39,7 @@ $(document).ready(function(){
         $(element).append(`<div id="seccionAvailableCourses" class="card m-2 p-3 availableCourses">
         <h2><a href="../pages/inscriptions.html">${courses.courseName}</a></h2>
         <ul>${populateAvaibleCourses(courses.teacher, courses.duration, courses.description)}</ul>
-        <div class="go"><a href="../pages/inscriptions.html"><img src="../images/cohete.png" alt=""></a></div>
+        <a href="../pages/inscriptions.html"><button class="go">🚀</button></a>
         </div>`
         );
     }
