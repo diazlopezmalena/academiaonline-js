@@ -7,15 +7,30 @@ form.onsubmit = (event) => {
     const inputEmailUser = document.getElementById('inputEmailUser');
     let inputEmailUserValue = inputEmailUser.value;
 
-    if((inputEmailUserValue == "email@a.com") || (inputEmailUserValue == "email2@a.com") || (inputEmailUserValue == "email3@a.com")) {
+    if (inputEmailUserValue === '') {
+        event.preventDefault();
+        const alert = document.createElement('div');
+        alert.className = "alert alert-danger";
+        alert.id = "incomplete";
+        alert.innerHTML = `<p>*El email es obligatorio.</p>`;
+        form.appendChild(alert);
+        $('html, body').animate({
+            scrollTop: $("#incomplete").offset().top  
+        }, 100);
+
+    } else if((inputEmailUserValue == "email@a.com") || (inputEmailUserValue == "email2@a.com") || (inputEmailUserValue == "email3@a.com")) {
         localStorage.setItem('sesion', inputEmailUser.value);
 
     } else {
         event.preventDefault();
         const alert2 = document.createElement('div');
         alert2.className = "alert alert-danger";
+        alert2.id = "wrong";
         alert2.innerHTML = `<p>El email no corresponde a un usuario registrado. Usa el usuario de prueba "email@a.com" para ver un ejemplo de curso.</p>`;
         form.appendChild(alert2);
+        $('html, body').animate({
+            scrollTop: $("#wrong").offset().top  
+        }, 100);
     }
 }
 

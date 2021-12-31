@@ -205,18 +205,19 @@ header nav ul li {
   padding: 20px;
 }
 
-#contenedorInscriptionButton {
+.contenedorButton {
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
-#contenedorInscriptionButton button {
+.contenedorButton button {
   background-color: black;
   border-color: black;
   padding: 10px 30px;
 }
 
-#contenedorInscriptionButton button:hover {
+.contenedorButton button:hover {
   background-color: aquamarine;
   border-color: black;
   color: black;
@@ -568,13 +569,17 @@ header nav ul li {
     width: 90%;
   }
 
-  /*** Inscription ***/
+  /*** Inscriptions ***/
   .contenedorForm {
     width: 90%;
   }
 
   #cardsComments {
     margin: 10px;
+  }
+
+  .spanInscription {
+    color: #d42525;
   }
 
   /*** Login ***/

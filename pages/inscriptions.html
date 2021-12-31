@@ -4,7 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscripción</title>
+  <title>Inscripción | E-learning</title>
+  <meta name="description" content="Formulario de inscripción en simulador de academia online. Web dinámica desarrollada con HTML, CSS y JS por Malena Díaz.">
+  <meta name="keywords" content="simulador, academia online, educación, form, formulario, inscripción, javascript">
+  <meta name="author" content="Malena Díaz">
+  <meta property="og: title" content="Formulario de inscripción | Simulador de academia online">
+  <meta property="og: description" content="Formulario de inscripción en simulador de academia online. Web dinámica desarrollada con HTML, CSS y JS por Malena Díaz.">
+  <meta property="og: image" content="images/nave-espacial.png">
+  <meta property="og: url" content="https://diazlopezmalena.github.io/academiaonline-js/">
+  <meta property="og: locale" content="es_ES">
   <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -61,25 +69,25 @@
       <button id="bttnComments" class="btn btn-light">Ver comentarios de estudiantes</button>
     </div>
     <div class="contenedorForm">
-      <form class="row g-3">
+      <form id="formInscription" class="row g-3">
         <div class="col-md-6">
-          <label for="inputName" class="form-label">Nombre</label>
+          <label for="inputName" class="form-label">Nombre<span class="spanInscription">*</span></label>
           <input id="inputName" type="text" class="form-control">
         </div>
         <div class="col-md-6">
-          <label for="inputSurname" class="form-label">Apellido</label>
+          <label for="inputSurname" class="form-label">Apellido<span class="spanInscription">*</span></label>
           <input id="inputSurname" type="text" class="form-control">
         </div>
         <div class="col-12">
-          <label for="inputEmail" class="form-label">Email</label>
+          <label for="inputEmail" class="form-label">Email<span class="spanInscription">*</span></label>
           <input id="inputEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="contacto@email.com">
         </div>
         <div class="col-md-6">
-          <label for="inputDni" class="form-label">DNI</label>
+          <label for="inputDni" class="form-label">DNI<span class="spanInscription">*</span></label>
           <input id="inputDni" type="number" class="form-control">
         </div>
         <div class="col-md-6">
-          <label for="inputCourse" class="form-label">Curso</label>
+          <label for="inputCourse" class="form-label">Curso<span class="spanInscription">*</span></label>
           <select id="inputCourse" class="form-select">
             <option selected>Realización Audiovisual con Adobe Premiere</option>
             <option>Fotografía y edición fotográfica</option>
@@ -93,7 +101,7 @@
             </label>
           </div>
         </div>
-        <div id="contenedorInscriptionButton" class="col-12">
+        <div class="contenedorButton" class="col-12">
           <button id="btnInscription" type="submit" class="btn btn-primary">Inscribirme</button>
         </div>
       </form>

@@ -37,9 +37,9 @@ $(document).ready(function(){
 
     function availableCourses(courses, element) {
         $(element).append(`<div id="seccionAvailableCourses" class="card m-2 p-3 availableCourses">
-        <h2><a href="../pages/inscriptions.html">${courses.courseName}</a></h2>
+        <h2><a href="pages/inscriptions.html">${courses.courseName}</a></h2>
         <ul>${populateAvaibleCourses(courses.teacher, courses.duration, courses.description)}</ul>
-        <a href="../pages/inscriptions.html"><button class="go">🚀</button></a>
+        <a href="pages/inscriptions.html"><button class="go">🚀</button></a>
         </div>`
         );
     }
@@ -52,7 +52,6 @@ $(document).ready(function(){
             scrollTop: $("#seccionAvailableCourses").offset().top  
         }, 100);
     });
-
 });
 
 
